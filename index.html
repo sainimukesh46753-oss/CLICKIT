@@ -1,17 +1,66 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14532d"><title>CLICKIT — Shop Smart. Get Fast.</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14532d"><meta name="description" content="CLICKIT — a neighbourhood grocery shopping demo for fresh produce, pantry staples and everyday essentials."><title>CLICKIT — Groceries, delivered with care</title>
 <style>
 :root{--g:#14532d;--lime:#c9f36b;--ink:#17251b;--muted:#718078;--bg:#f7f9f3;--line:#e7eee2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,Arial,sans-serif}button,input{font:inherit}button{cursor:pointer;border:0}.top{background:var(--g);color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.04em}.top b{color:var(--lime)}header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1200px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:18px}.logo{font-size:27px;font-weight:950;letter-spacing:-1.8px;color:var(--g);white-space:nowrap}.logo span{color:#91c83e}.delivery{font-size:11px;color:var(--muted);min-width:125px}.delivery strong{display:block;color:var(--ink);font-size:13px}.search{flex:1;display:flex;align-items:center;background:#f2f6ed;border:1px solid var(--line);border-radius:13px;padding:0 13px;gap:9px}.search input{width:100%;padding:12px 0;border:0;outline:0;background:transparent}.btn{background:var(--g);color:white;border-radius:11px;padding:11px 15px;font-weight:800}.btn.alt{background:#edf4e5;color:var(--g)}.wrap{max-width:1200px;margin:auto;padding:24px 22px}.hero{background:#e8f4d7;border-radius:25px;padding:35px 40px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;min-height:285px;overflow:hidden}.eyebrow{font-weight:850;color:#47721d;font-size:12px;letter-spacing:.13em;text-transform:uppercase}.hero h1{font-size:clamp(38px,5vw,61px);line-height:.98;letter-spacing:-3px;margin:12px 0}.hero p{color:#4e6550;max-width:420px}.cta{display:inline-block;background:var(--g);color:white;text-decoration:none;padding:13px 18px;border-radius:12px;font-weight:850;margin-top:8px}.heroimg{width:100%;height:225px;object-fit:cover;border-radius:20px}.promises{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 28px}.promises span{background:white;border:1px solid var(--line);padding:9px 13px;border-radius:30px;font-size:12px;font-weight:750}.head{display:flex;align-items:end;justify-content:space-between;margin:29px 0 14px}.head h2{margin:0;font-size:25px;letter-spacing:-.7px}.head small{color:var(--muted)}.cats{display:grid;grid-template-columns:repeat(8,1fr);gap:11px}.cat{background:white;border:1px solid var(--line);border-radius:16px;padding:13px 5px;text-align:center}.cat.active,.cat:hover{border-color:#91bd55;background:#f1f8e7}.cat i{font-style:normal;font-size:29px;display:block;margin-bottom:5px}.cat b{font-size:12px}.products{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.product{background:white;border:1px solid var(--line);border-radius:17px;padding:10px;position:relative;min-width:0}.product img{width:100%;height:135px;object-fit:cover;border-radius:12px;background:#f1f4ed}.tag{position:absolute;top:16px;left:16px;background:#eaf5d9;color:#426d19;font-size:10px;font-weight:900;padding:5px 7px;border-radius:7px}.product h3{font-size:13px;margin:9px 0 3px;min-height:35px}.sub{font-size:11px;color:var(--muted)}.price{font-weight:900;margin-top:8px}.add{margin-top:9px;width:100%;border:1px solid #91b95d;background:#f3f9e9;color:var(--g);border-radius:10px;padding:9px;font-weight:900}.add:hover{background:var(--lime)}.banner{margin:31px 0;background:#183e2a;color:white;border-radius:22px;padding:24px 29px;display:flex;justify-content:space-between;align-items:center}.banner h2{margin:0;font-size:23px}.banner p{margin:5px 0 0;color:#cbd9cc}.banner b{font-size:35px;color:var(--lime)}footer{background:#102d1e;color:#dce8dd;padding:32px 22px;margin-top:42px}.foot{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#dce8dd}.foot small{color:#aabdaf}.floatcart{position:fixed;bottom:18px;right:18px;z-index:12;background:var(--g);color:white;border-radius:14px;padding:13px 17px;box-shadow:0 8px 24px #102d1e40;font-weight:900}.overlay{display:none;position:fixed;inset:0;background:#10201880;z-index:30;justify-content:flex-end}.overlay.show{display:flex}.drawer{background:white;width:min(440px,100%);height:100%;padding:23px;overflow:auto}.drawerhead{display:flex;justify-content:space-between;align-items:center}.drawerhead h2{margin:0}.close{background:#edf3e8;border-radius:9px;padding:8px 11px}.cartrow{display:grid;grid-template-columns:55px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.cartrow img{width:55px;height:55px;object-fit:cover;border-radius:9px}.qty{display:flex;align-items:center;gap:7px}.qty button{background:#edf4e5;border-radius:7px;padding:4px 8px}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;padding:18px 0}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:7px 0 12px}.checkout{width:100%;background:var(--g);color:white;padding:14px;border-radius:12px;font-weight:900}.notice{font-size:12px;color:var(--muted)}.empty{text-align:center;color:var(--muted);padding:42px 10px}.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#173c25;color:#fff;padding:11px 17px;border-radius:30px;display:none;z-index:50}.toast.show{display:block}.orders{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px}.orderitem{padding:10px 0;border-bottom:1px solid var(--line)}@media(max-width:850px){.nav{gap:9px;flex-wrap:wrap}.delivery{display:none}.search{order:3;flex-basis:100%}.cats{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(3,1fr)}.hero{padding:25px;grid-template-columns:1fr}.heroimg{height:170px}.banner b{font-size:25px}}@media(max-width:520px){.wrap{padding:16px 12px}.nav{padding:11px 12px}.logo{font-size:24px}.btn{padding:10px}.hero h1{font-size:41px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.product{padding:8px}.product img{height:110px}.cats{gap:7px}.cat i{font-size:24px}.cat b{font-size:10px}.banner{padding:18px}.banner h2{font-size:18px}}
+
+/* Storefront refresh */
+:root{--g:#176b3a;--lime:#d8f36a;--ink:#17231b;--muted:#6f7c72;--bg:#f6f8f4;--line:#e6ebe4}
+body{background:#f7f8f5;color:#17231b}
+.top{background:#123f28;padding:9px 14px;font-size:11px}
+header{box-shadow:0 3px 18px #193d1c0b}
+.nav{max-width:1280px;padding:15px 24px;gap:22px}
+.logo{font-size:30px;letter-spacing:-2px}
+.delivery{border-left:1px solid #e5eae2;padding-left:18px;cursor:pointer}
+.delivery:before{content:"⌖";font-size:18px;color:#277644;float:left;margin:2px 8px 0 0}
+.search{background:#f5f7f3;border-color:#e3e9df;border-radius:12px}
+.search:focus-within{border-color:#8dbb83;background:#fff;box-shadow:0 0 0 3px #e7f2e5}
+.search input{font-size:14px}
+.btn{border-radius:10px;background:#176b3a}
+.btn.alt{background:#eff5ec}
+.wrap{max-width:1280px;padding:26px 24px}
+.hero{background:linear-gradient(105deg,#e9f4df 0%,#f1f6e8 55%,#e1efd5 100%);border:1px solid #dce9d3;border-radius:20px;padding:36px 42px;min-height:300px}
+.hero h1{font-size:clamp(40px,5vw,58px);letter-spacing:-2.8px;color:#183e28}
+.hero p{font-size:15px;line-height:1.7;color:#526755}
+.heroimg{height:235px;box-shadow:0 15px 35px #294a2520}
+.eyebrow{font-size:11px;letter-spacing:.16em}
+.cta{border-radius:9px;padding:13px 20px;background:#176b3a}
+.promises{gap:10px;margin:17px 0 34px}
+.promises span{border-radius:9px;background:#fff;border-color:#e8ece5;padding:10px 13px;color:#425247}
+.head{margin:34px 0 16px}
+.head h2{font-size:23px;letter-spacing:-.6px}
+.cats{grid-template-columns:repeat(9,1fr);gap:12px}
+.cat{border-radius:13px;padding:15px 6px 13px;transition:.18s;box-shadow:0 2px 8px #17251b05}
+.cat i{font-size:30px}
+.cat b{font-size:12px;color:#33453a}
+.cat.active,.cat:hover{background:#f2f8eb;border-color:#9bc57c;transform:translateY(-2px)}
+.products{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.product{border-radius:14px;padding:11px;border-color:#e8ece6;box-shadow:0 3px 12px #1b3d1b07;transition:transform .18s,box-shadow .18s}
+.product:hover{transform:translateY(-3px);box-shadow:0 10px 24px #1b3d1b12}
+.product img{height:150px;border-radius:10px;background:#f4f5f1}
+.tag{top:17px;left:17px;background:#eaf5df;color:#386b2a}
+.product h3{font-size:13px;line-height:1.4;color:#233328;min-height:37px}
+.sub{font-size:11px;color:#7b877e}
+.price{font-size:15px;color:#1b2c20}
+.add{background:#f7fbf3;border-color:#9abd80;border-radius:8px;padding:10px;color:#176b3a}
+.add:hover{background:#e7f4dc}
+.banner{border-radius:17px;background:linear-gradient(110deg,#163f29,#23583a);padding:27px 32px}
+.banner b{font-size:30px}
+footer{background:#123722}
+.floatcart{background:#176b3a;border-radius:12px}
+.drawer{box-shadow:-12px 0 35px #00000012}
+.checkout{background:#176b3a;border-radius:9px}
+@media(max-width:850px){.nav{padding:12px 16px}.cats{grid-template-columns:repeat(5,1fr)}.products{grid-template-columns:repeat(3,1fr)}.hero{padding:26px}.wrap{padding:20px 16px}}
+@media(max-width:520px){.wrap{padding:15px 12px}.nav{padding:10px 12px}.logo{font-size:25px}.hero{border-radius:15px;padding:22px 18px}.hero h1{font-size:40px}.heroimg{height:155px}.cats{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product img{height:118px}.product{padding:8px}.banner{padding:19px}.banner b{font-size:22px}}
 </style></head><body>
-<div class="top">⚡ <b>CLICKIT QUICK COMMERCE</b> · Everyday essentials, just a click away</div>
+<div class="top">FREE DELIVERY ON YOUR FIRST DEMO BASKET · <b>CLICKIT</b> — your neighbourhood essentials, all in one place</div>
 <header><div class="nav"><div class="logo">CLICK<span>IT</span>.</div><div class="delivery">DELIVERING TO<strong id="location">Choose location ▾</strong></div><div class="search">⌕ <input id="search" placeholder="Search milk, bread, fruits..." aria-label="Search products"></div><button class="btn alt" id="ordersBtn">My orders</button><button class="btn" id="cartBtn">🛒 Cart <span id="cartCount">0</span></button></div></header>
-<main class="wrap"><section class="hero"><div><div class="eyebrow">Shop smart. Get fast.</div><h1>Good things<br>come quick.</h1><p>Fresh groceries, daily essentials and little treats — all in one easy place. Your neighbourhood shopping, reimagined.</p><a class="cta" href="#shop">Start shopping →</a></div><img class="heroimg" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85" alt="Fresh colourful groceries"></section>
-<div class="promises"><span>⚡ Fast delivery experience</span><span>🥬 Fresh picks every day</span><span>🔒 Secure shopping</span><span>♡ Everyday value</span></div>
-<div class="head"><h2>Shop by category</h2><small>Find your favourites</small></div><div class="cats" id="categories"></div>
-<div class="head" id="shop"><h2 id="productHeading">Popular near you</h2><small id="productCount"></small></div><div class="products" id="products"></div>
-<div class="banner"><div><h2>Little things. Big convenience.</h2><p>Build your basket and make today easier.</p></div><b>CLICKIT →</b></div>
+<main class="wrap"><section class="hero"><div><div class="eyebrow">YOUR EVERYDAY GROCERY STOP</div><h1>Fresh picks.<br>Easy living.</h1><p>From fresh fruits and vegetables to pantry staples and home essentials, build your basket in a few simple clicks.</p><a class="cta" href="#shop">Start shopping →</a></div><img class="heroimg" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85" alt="Fresh colourful groceries"></section>
+<div class="promises"><span>⚡ Convenient ordering</span><span>🥬 Everyday essentials</span><span>🔒 Simple checkout</span><span>♡ Made for your routine</span></div>
+<div class="head"><h2>Shop by category</h2><small>Browse the collection</small></div><div class="cats" id="categories"></div>
+<div class="head" id="shop"><h2 id="productHeading">Popular essentials</h2><small id="productCount"></small></div><div class="products" id="products"></div>
+<div class="banner"><div><h2>Your daily list, made simpler.</h2><p>Explore everyday essentials and put together your next basket.</p></div><b>CLICKIT →</b></div>
 <section id="orderHistory"><div class="head"><h2>Your recent orders</h2><small>Saved on this device</small></div><div class="orders" id="ordersList">Your orders will appear here after checkout.</div></section></main>
-<footer><div class="foot"><div><div class="logo" style="color:white">CLICK<span>IT</span>.</div><p>Everyday essentials, made easy.</p><small>© 2026 CLICKIT · Demo storefront</small></div><div><b>Customer care</b><p>Help · Delivery information · Returns</p><small>Payments are demo-only in this preview.</small></div><div><b>Quick links</b><p><a href="/admin/">Admin panel</a> · Privacy · Terms</p><small>Delivery times depend on service availability.</small></div></div></footer>
+<footer><div class="foot"><div><div class="logo" style="color:white">CLICK<span>IT</span>.</div><p>A simple demo storefront for everyday grocery shopping.</p><small>© 2026 CLICKIT · Demo storefront</small></div><div><b>Customer care</b><p>Help · Delivery information · Returns</p><small>Demo only · No live payments or delivery dispatch.</small></div><div><b>Quick links</b><p><a href="/admin/">Admin panel</a> · Privacy · Terms</p><small>Delivery times depend on service availability.</small></div></div></footer>
 <button class="floatcart" id="floatCart">🛒 View basket · <span id="floatCount">0</span></button>
 <div class="overlay" id="overlay"><aside class="drawer"><div class="drawerhead"><h2>Your basket</h2><button class="close" id="close">✕</button></div><div id="cartItems"></div><div id="checkoutArea"></div></aside></div><div class="toast" id="toast"></div>
 <script>
