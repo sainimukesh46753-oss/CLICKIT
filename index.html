@@ -121,6 +121,72 @@ footer{background:#203e2b;padding:34px 22px}
 .drawer{box-shadow:-5px 0 25px #00000010}.checkout{background:#276443}
 @media(max-width:900px){.products{grid-template-columns:repeat(4,minmax(0,1fr))}.cats{grid-template-columns:repeat(5,minmax(0,1fr))}.nav{gap:12px}}
 @media(max-width:600px){.nav{padding:10px 12px}.wrap{padding:15px 12px}.hero{padding:22px 18px;grid-template-columns:1fr;gap:18px}.hero h1{font-size:42px;letter-spacing:-2px}.heroimg{height:155px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:8px}.product img{height:115px}.cats{grid-template-columns:repeat(3,minmax(0,1fr))}.cat img{height:53px}.head h2{font-size:21px}.banner{padding:18px}.banner h2{font-size:19px}}
+
+/* Premium modern CLICKIT visual system */
+:root{--g:#174d35;--lime:#d7ef9b;--ink:#182b21;--muted:#718075;--bg:#f7f8f5;--line:#e7ebe5}
+body{background:#f7f8f5;color:var(--ink);font-family:Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:-.01em}
+.top{background:#123c2b;color:#eaf2e9;padding:9px 14px;font-size:10px;letter-spacing:.09em}
+.top b{color:#d7ef9b}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid #e9eee8;box-shadow:0 5px 22px rgba(20,49,31,.035)}
+.nav{max-width:1320px;padding:15px 28px;gap:22px}
+.logo{font-size:30px;font-weight:950;letter-spacing:-2px;color:#173e2c}
+.logo span{color:#87a94f}
+.delivery{font-size:10px;letter-spacing:.09em;color:#839087}
+.delivery strong{font-size:13px;color:#263d2f;letter-spacing:0}
+.search{background:#f6f8f4;border:1px solid #e5ebe3;border-radius:13px;padding:0 15px;transition:.2s}
+.search:focus-within{background:white;border-color:#9ab58d;box-shadow:0 0 0 4px rgba(135,169,79,.12)}
+.search input{font-size:13px}
+.btn{background:#174d35;border-radius:10px;padding:12px 17px;font-size:12px;letter-spacing:.01em;transition:transform .18s,background .18s}
+.btn:hover,.cta:hover,.checkout:hover{background:#0f3c29;transform:translateY(-1px)}
+.btn.alt{background:#f0f4ed;color:#31533c;border:1px solid #e5ebe1}
+.wrap{max-width:1320px;padding:29px 28px}
+.hero{background:linear-gradient(115deg,#edf3e7 0%,#f3f6ee 58%,#e7efdf 100%);border:1px solid #e1e9dc;border-radius:22px;padding:42px 46px;min-height:325px;gap:35px}
+.eyebrow{color:#6b8755;font-size:10px;letter-spacing:.18em}
+.hero h1{font-size:clamp(44px,5vw,64px);line-height:.99;letter-spacing:-3.5px;color:#193e2b;margin:16px 0}
+.hero p{font-size:14px;line-height:1.8;color:#667568;max-width:440px}
+.heroimg{height:245px;border-radius:16px;box-shadow:0 16px 38px rgba(29,55,34,.12)}
+.cta{background:#174d35;border-radius:10px;padding:13px 19px;font-size:12px;box-shadow:0 7px 18px rgba(23,77,53,.13)}
+.promises{gap:9px;margin:18px 0 33px}
+.promises span{background:#fff;border:1px solid #e9eee7;border-radius:9px;padding:10px 13px;font-size:11px;color:#627166;box-shadow:0 2px 8px rgba(20,49,31,.025)}
+.head{margin:35px 0 16px;align-items:center}
+.head h2{font-size:24px;font-weight:780;letter-spacing:-.9px;color:#20382a}
+.head small{font-size:11px;color:#879187}
+.cats{grid-template-columns:repeat(9,minmax(0,1fr));gap:12px}
+.cat{background:#fff;border:1px solid #e9eee7;border-radius:14px;padding:11px 9px;box-shadow:0 3px 12px rgba(20,49,31,.035);transition:all .2s}
+.cat img{height:68px;border-radius:9px;object-fit:cover}
+.cat b{font-size:11px;font-weight:750;color:#3d5143}
+.cat.active,.cat:hover{background:#f1f6eb;border-color:#a8bf96;box-shadow:0 6px 16px rgba(39,85,48,.08);transform:translateY(-2px)}
+.products{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.product{background:#fff;border:1px solid #e8ede6;border-radius:15px;padding:11px;box-shadow:0 3px 14px rgba(20,49,31,.035);transition:all .2s}
+.product:hover{border-color:#c8d8bf;box-shadow:0 10px 25px rgba(20,49,31,.08);transform:translateY(-3px)}
+.product img{height:145px;border-radius:10px;background:#f1f3ee}
+.tag{background:#edf4e5;color:#4d703d;border-radius:6px;font-size:9px;letter-spacing:.04em;padding:5px 8px}
+.product h3{font-size:12px;line-height:1.5;font-weight:750;color:#263b2d;min-height:36px}
+.sub{font-size:10px;color:#879187}
+.price{font-size:15px;font-weight:850;color:#203c2b}
+.add{background:#f8fbf5;border:1px solid #bfd0b4;border-radius:8px;color:#24583a;font-size:11px;font-weight:850;letter-spacing:.04em;padding:10px}
+.add:hover{background:#eaf3e2;border-color:#91ad7e}
+.banner{background:linear-gradient(110deg,#eaf1e4,#f2f5ed);border:1px solid #e3ebdd;border-radius:17px;padding:27px 32px;margin:37px 0}
+.banner h2{font-size:24px;color:#23442f;letter-spacing:-.7px}
+.banner p{font-size:12px;color:#748174}
+.banner b{color:#537b42;font-size:26px;letter-spacing:-1px}
+footer{background:#173b2a;padding:39px 28px}
+footer .logo{color:#fff!important}
+footer p{font-size:12px;color:#d2dfd3}
+footer small{font-size:10px;color:#a9bdad}
+footer b{font-size:12px}
+.floatcart{background:#174d35;border-radius:12px;padding:14px 19px;box-shadow:0 9px 25px rgba(19,60,39,.22);font-size:12px}
+.drawer{box-shadow:-12px 0 40px rgba(15,35,22,.12)}
+.drawerhead h2{font-size:23px;letter-spacing:-.7px}
+.close{background:#f0f4ed;border-radius:9px}
+.checkout{background:#174d35;border-radius:10px;font-size:12px;letter-spacing:.02em}
+.field{border-color:#e4eae1;border-radius:9px;font-size:13px}
+.field:focus{outline:2px solid #dcebd1;border-color:#9ab58d}
+.orders{border-color:#e7ece5;border-radius:14px;box-shadow:0 3px 12px rgba(20,49,31,.025)}
+.toast{background:#173f2c;box-shadow:0 8px 25px rgba(0,0,0,.14);font-size:12px}
+@media(max-width:900px){.nav{padding:12px 16px}.wrap{padding:21px 16px}.hero{padding:30px}.cats{grid-template-columns:repeat(5,minmax(0,1fr))}.products{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){.nav{padding:10px 12px}.wrap{padding:15px 12px}.hero{padding:23px 19px;border-radius:16px}.hero h1{font-size:43px;letter-spacing:-2.5px}.heroimg{height:160px}.promises{margin:14px 0 25px}.promises span{font-size:10px;padding:8px 9px}.head{margin:27px 0 13px}.head h2{font-size:21px}.cats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.cat{padding:8px}.cat img{height:55px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:8px;border-radius:12px}.product img{height:116px}.banner{padding:19px;margin:27px 0}.banner h2{font-size:19px}.banner b{font-size:21px}footer{padding:30px 16px}}
+
 </style></head><body>
 <div class="top">FREE DELIVERY ON YOUR FIRST DEMO BASKET · <b>CLICKIT</b> — your neighbourhood essentials, all in one place</div>
 <header><div class="nav"><div class="logo">CLICK<span>IT</span>.</div><div class="delivery">DELIVERING TO<strong id="location">Choose location ▾</strong></div><div class="search">⌕ <input id="search" placeholder="Search milk, bread, fruits..." aria-label="Search products"></div><button class="btn alt" id="ordersBtn">My orders</button><button class="btn" id="cartBtn">🛒 Cart <span id="cartCount">0</span></button></div></header>
