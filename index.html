@@ -73,6 +73,54 @@ footer{background:#123722}
 footer{padding:40px 30px}.floatcart{padding:14px 20px}
 @media(max-width:1000px){.products{grid-template-columns:repeat(4,minmax(0,1fr))}.cats{grid-template-columns:repeat(5,1fr)}}
 @media(max-width:600px){.nav{padding:11px 14px}.wrap{padding:17px 13px}.hero{padding:23px 19px;min-height:0}.hero h1{font-size:43px;letter-spacing:-2.5px}.heroimg{height:165px}.hero:after{display:none}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product img{height:120px}.cats{grid-template-columns:repeat(3,1fr)}.cat img{height:55px}.head h2{font-size:22px}.banner{padding:20px}.banner h2{font-size:20px}}
+/* Clean editorial grocery redesign */ 
+:root{--g:#276443;--lime:#dcebc9;--ink:#243329;--muted:#778278;--bg:#fbfcf9;--line:#e9eee7}
+body{background:#fbfcf9;color:#243329}
+.top{background:#f0f5eb;color:#36583d;padding:8px;font-size:11px;letter-spacing:.025em}
+.top b{color:#276443}
+header{background:#fffffff2;box-shadow:none;border-bottom:1px solid #e8ede5}
+.nav{max-width:1240px;padding:13px 22px;gap:20px}
+.logo{font-size:27px;letter-spacing:-1.4px;color:#244c34}
+.logo span{color:#8db55d}
+.delivery{border:0;padding:0;min-width:140px}
+.delivery:before{display:none}
+.search{background:#f7f9f5;border:1px solid #e7ece4;border-radius:10px}
+.search:focus-within{box-shadow:0 0 0 3px #eaf1e6;border-color:#b6c9ae}
+.btn{background:#276443;border-radius:9px;box-shadow:none;padding:11px 15px}
+.btn.alt{background:#f0f4ed;color:#355a40}
+.wrap{max-width:1240px;padding:25px 22px}
+.hero{background:#f0f4e9;border:0;border-radius:18px;grid-template-columns:1.05fr .95fr;min-height:300px;padding:34px 38px}
+.hero h1{font-size:clamp(40px,4.8vw,58px);letter-spacing:-2.7px;line-height:1.02;color:#244631;margin:12px 0}
+.hero p{font-size:14px;line-height:1.7;color:#657265}
+.heroimg{height:230px;border-radius:13px;box-shadow:none;outline:0}
+.hero:after{display:none}
+.eyebrow{font-size:10px;letter-spacing:.13em;color:#55744c}
+.cta{background:#276443;border-radius:8px;padding:12px 17px}
+.promises{margin:17px 0 29px;gap:8px}
+.promises span{border-radius:7px;padding:8px 11px;background:#fff;border-color:#edf0e9;color:#667366;font-weight:650}
+.head{margin:30px 0 15px}.head h2{font-size:23px;letter-spacing:-.6px;font-weight:750}
+.cats{grid-template-columns:repeat(9,minmax(0,1fr));gap:10px}
+.cat{border:1px solid #edf0e9;border-radius:12px;padding:9px;background:white;box-shadow:none}
+.cat img{height:61px;border-radius:8px;margin-bottom:7px}
+.cat b{font-size:11px;color:#405345}
+.cat.active,.cat:hover{transform:none;background:#f3f7ef;border-color:#a8c49c}
+.products{grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.product{border:1px solid #e9eee7;border-radius:12px;padding:9px;box-shadow:none;transition:border-color .15s}
+.product:hover{transform:none;box-shadow:0 4px 15px #213b2108;border-color:#cbd9c5}
+.product img{height:132px;border-radius:8px;background:#f6f7f3}
+.tag{top:14px;left:14px;border-radius:5px;font-size:9px}
+.product h3{font-size:12px;line-height:1.45;min-height:34px;font-weight:700}
+.sub{font-size:10px;color:#818a81}
+.price{font-size:14px;color:#263c2d}
+.add{background:#fff;border:1px solid #b8cbb0;color:#276443;border-radius:7px;padding:9px;font-size:11px}
+.add:hover{background:#edf5e7}
+.banner{background:#eef3e9;color:#294832;border-radius:14px;padding:24px 28px;margin:30px 0}
+.banner p{color:#6a7968}.banner b{color:#527a43;font-size:24px}
+footer{background:#203e2b;padding:34px 22px}
+.floatcart{background:#276443;border-radius:10px;box-shadow:0 5px 20px #1e3a2220}
+.drawer{box-shadow:-5px 0 25px #00000010}.checkout{background:#276443}
+@media(max-width:900px){.products{grid-template-columns:repeat(4,minmax(0,1fr))}.cats{grid-template-columns:repeat(5,minmax(0,1fr))}.nav{gap:12px}}
+@media(max-width:600px){.nav{padding:10px 12px}.wrap{padding:15px 12px}.hero{padding:22px 18px;grid-template-columns:1fr;gap:18px}.hero h1{font-size:42px;letter-spacing:-2px}.heroimg{height:155px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:8px}.product img{height:115px}.cats{grid-template-columns:repeat(3,minmax(0,1fr))}.cat img{height:53px}.head h2{font-size:21px}.banner{padding:18px}.banner h2{font-size:19px}}
 </style></head><body>
 <div class="top">FREE DELIVERY ON YOUR FIRST DEMO BASKET · <b>CLICKIT</b> — your neighbourhood essentials, all in one place</div>
 <header><div class="nav"><div class="logo">CLICK<span>IT</span>.</div><div class="delivery">DELIVERING TO<strong id="location">Choose location ▾</strong></div><div class="search">⌕ <input id="search" placeholder="Search milk, bread, fruits..." aria-label="Search products"></div><button class="btn alt" id="ordersBtn">My orders</button><button class="btn" id="cartBtn">🛒 Cart <span id="cartCount">0</span></button></div></header>
@@ -110,6 +158,26 @@ const EXTRA=[
 ];
 const photoFallback={Fruits:"photo-1560806887-1e4cd0b6cbd6",Vegetables:"photo-1576045057995-568f588f82fb",Dairy:"photo-1563636619-e9143da7973b",Bakery:"photo-1509440159596-0249088772ff",Snacks:"photo-1566478989037-eec170784d0b",Beverages:"photo-1600271886742-f049cd451bba",Staples:"photo-1586201375761-83865001e31c",Household:"photo-1585837575652-267c041d77d4"};
 EXTRA.forEach((x,i)=>{let [name,price,cat,photo,unit]=x; if(!photo.startsWith("photo-")||photo.includes(" ")) photo=photoFallback[cat]||photoFallback.Staples; P.push({id:21+i,name,unit,price,cat,emoji:"🛍️",photo,tag:"Everyday"})});
+
+
+// Keep product names unique and prevent the same photo ID from being reused across different SKUs.
+const usedNames=new Set();
+const usedPhotos=new Set();
+P.forEach((p,i)=>{
+  const nameKey=p.name.trim().toLowerCase();
+  if(usedNames.has(nameKey)) p.name=p.name+" · "+p.unit;
+  usedNames.add(p.name.trim().toLowerCase());
+  let photoKey=p.photo;
+  if(!photoKey || photoKey.includes(" ") || photoKey==="photo- watermelon" || photoKey==="photo-果" || photoKey==="photo- soda" || photoKey==="photo- coconut" || photoKey==="photo- energy" || photoKey==="photo- oats" || photoKey==="photo- cereal" || photoKey==="photo- ketchup" || photoKey==="photo- condiment" || photoKey==="photo- pasta" || photoKey==="photo- garlic" || photoKey==="photo- ginger" || photoKey==="photo- mushrooms" || photoKey==="photo- lettuce" || photoKey==="photo- sweetpotato" || photoKey==="photo- eggplant" || photoKey==="photo- gourd" || photoKey==="photo- okra" || photoKey==="photo- strawberry" || photoKey==="photo- blueberries" || photoKey==="photo- pear" || photoKey==="photo- guava" || photoKey==="photo- sapodilla" || photoKey==="photo- icecream" || photoKey==="photo- energy" || photoKey==="photo- soda"){
+    p.photo="photo-1542838132-92c53300491e";
+    photoKey=p.photo;
+  }
+  if(usedPhotos.has(photoKey)){
+    p.photo="photo-1542838132-92c53300491e";
+    p._uniqueImageQuery=p.name.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+  }
+  usedPhotos.add(p.photo);
+});
 
 const C=[["All","photo-1542838132-92c53300491e"],["Fruits","photo-1560806887-1e4cd0b6cbd6"],["Vegetables","photo-1576045057995-568f588f82fb"],["Dairy","photo-1563636619-e9143da7973b"],["Bakery","photo-1509440159596-0249088772ff"],["Snacks","photo-1566478989037-eec170784d0b"],["Beverages","photo-1600271886742-f049cd451bba"],["Staples","photo-1586201375761-83865001e31c"],["Household","photo-1585837575652-267c041d77d4"]];
 let category="All",cart=JSON.parse(localStorage.getItem("clickit_cart")||"{}");const img=p=>"https://images.unsplash.com/"+p.photo+"?auto=format&fit=crop&w=500&q=80",ru=n=>"₹"+n;
