@@ -211,14 +211,89 @@ footer b{font-size:12px}
 
 /* Click-to-open photo gallery for all storefront imagery */
 .photo-gallery{display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;padding:18px}.photo-gallery.open{display:flex}.gallery-backdrop{position:absolute;inset:0;background:rgba(9,20,13,.82);backdrop-filter:blur(5px)}.gallery-dialog{position:relative;z-index:1;width:min(900px,96vw);max-height:92vh;background:#fbfcf8;border-radius:20px;padding:18px;display:grid;grid-template-columns:42px minmax(0,1fr) 42px;grid-template-rows:minmax(220px,1fr) auto;gap:12px;box-shadow:0 25px 90px #0005}.gallery-close{position:absolute;right:12px;top:12px;z-index:3;width:38px;height:38px;border-radius:50%;background:#fff;font-size:25px}.gallery-stage{grid-column:2;grid-row:1;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}.gallery-stage img{display:block;max-width:100%;width:auto;height:min(62vh,560px);object-fit:contain;border-radius:12px}.gallery-caption{font-weight:800;padding:9px}.gallery-arrow{align-self:center;width:38px;height:48px;border-radius:12px;background:#e9f0e5;color:#174d35;font-size:32px}.gallery-arrow.prev{grid-column:1;grid-row:1}.gallery-arrow.next{grid-column:3;grid-row:1}.gallery-thumbs{grid-column:1/-1;display:flex;gap:9px;overflow-x:auto;padding:4px}.gallery-thumbs button{flex:0 0 76px;height:62px;padding:3px;border:2px solid transparent;border-radius:9px;background:white}.gallery-thumbs button.active{border-color:#276443}.gallery-thumbs img{width:100%;height:100%;object-fit:cover;border-radius:6px}.product>img,.heroimg{cursor:zoom-in}.cat img{cursor:pointer}.gallery-close:hover,.gallery-arrow:hover{filter:brightness(.95)}@media(max-width:600px){.photo-gallery{padding:8px}.gallery-dialog{width:100%;padding:12px;grid-template-columns:32px minmax(0,1fr) 32px;gap:6px}.gallery-arrow{width:30px;height:42px}.gallery-stage img{height:55vh}.gallery-thumbs button{flex-basis:62px;height:54px}}
+
+/* CLICKIT full storefront redesign — editorial retail layout */
+:root{--g:#174c35;--lime:#d5e9a8;--ink:#203329;--muted:#738078;--bg:#fff;--line:#e8ece7}
+html{scroll-behavior:smooth;scroll-padding-top:105px}
+body{background:#fff;color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif}
+.top{background:#173e2e;color:#f5f7f2;padding:9px 14px;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.top b{color:#d5e9a8}
+header{background:#fff;border-bottom:1px solid #e8ece7;box-shadow:0 4px 18px #193b2608}
+.nav{max-width:1440px;min-height:78px;padding:13px 42px;gap:22px}
+.logo{font-size:31px;letter-spacing:-2px;text-decoration:none;color:#173e2e}
+.logo span{color:#8cad56}.logo i{font-style:normal;color:#173e2e}
+.delivery{min-width:145px;border-left:1px solid #e6ebe4;padding-left:19px;cursor:pointer}
+.delivery:before{display:none}.delivery span{font-size:9px;letter-spacing:.12em;font-weight:800;color:#879187}
+.delivery strong{font-size:12px;color:#203b2b}
+.search{min-height:45px;background:#f7f8f5;border:1px solid #e8ece5;border-radius:7px;padding:0 14px}
+.search input{font-size:12px}.search-hint{font-size:10px;color:#8b958d}
+.main-links{display:flex;align-items:center;gap:19px;white-space:nowrap}
+.main-links a{font-size:11px;font-weight:750;color:#46564b;text-decoration:none}
+.main-links a:hover{color:#174c35}
+.btn{font-size:11px;padding:11px 15px;border-radius:6px;background:#174c35}
+.btn.alt{background:#fff;border:1px solid #e3e9e1;color:#36513f}
+.wrap{max-width:1440px;padding:27px 42px}
+.hero{background:#f0f4e9;border:0;border-radius:3px;min-height:390px;padding:52px 58px;grid-template-columns:1fr 1fr;gap:52px}
+.hero-copy{max-width:550px}.eyebrow{font-size:9px;letter-spacing:.19em;color:#6d8657;font-weight:850}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(52px,5.5vw,76px);letter-spacing:-2.8px;line-height:.98;color:#193d2a;margin:19px 0}
+.hero p{font-size:13px;line-height:1.9;color:#68756b;max-width:420px}
+.cta{background:#174c35;border-radius:2px;padding:14px 22px;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.heroimg{height:290px;border-radius:2px;box-shadow:none}
+.image-note{border-radius:0;background:#fff;padding:12px 17px;box-shadow:0 5px 18px #20332912}
+.image-note b{font-size:9px;letter-spacing:.12em}.image-note span{font-size:10px}
+.hero-controls button{border-radius:50%;background:#fff;border:1px solid #dce5d7;color:#174c35}
+.promises{display:flex;justify-content:center;gap:0;border-bottom:1px solid #edf0eb;margin:0 0 37px;padding:16px 0}
+.promises span{background:none;border:0;border-radius:0;padding:3px 28px;color:#65736a;font-size:10px}
+.promises span+span{border-left:1px solid #e5eae3}
+.shop-moments{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:15px;margin:34px 0 48px}
+.moment-card{height:190px;position:relative;overflow:hidden;text-decoration:none;color:#fff;padding:23px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;background:#294a35}
+.moment-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#102719d9 0%,#10271915 80%)}
+.moment-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.moment-card:hover img{transform:scale(1.05)}
+.moment-card span,.moment-card b,.moment-card em{position:relative;z-index:1}
+.moment-card span{font-size:8px;letter-spacing:.17em;font-weight:850;margin-bottom:8px}
+.moment-card b{font:500 26px/1.03 Georgia,serif;letter-spacing:-.5px}
+.moment-card em{font-style:normal;font-size:9px;margin-top:10px;letter-spacing:.04em}
+.head{margin:42px 0 17px;align-items:end}
+.head h2{font:500 32px/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.6px;color:#203b2b}
+.head small{font-size:10px;color:#879188}
+.cats{grid-template-columns:repeat(9,minmax(0,1fr));gap:10px}
+.cat{border:1px solid #edf0eb;border-radius:2px;padding:10px 8px;background:#fff;box-shadow:none;transition:border-color .2s}
+.cat img{height:72px;border-radius:0;margin-bottom:9px}
+.cat b{font-size:10px;font-weight:700;color:#45564a}
+.cat.active,.cat:hover{background:#f4f7f0;border-color:#9eb68c;box-shadow:none;transform:none}
+.products{grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}
+.product{border:1px solid #e9ede7;border-radius:2px;padding:12px;box-shadow:none;transition:border-color .2s}
+.product:hover{transform:none;box-shadow:0 8px 20px #2033290c;border-color:#c5d3bd}
+.product img{height:175px;border-radius:0;background:#f5f6f2}
+.product h3{font-size:12px;font-weight:700;color:#273b2e;min-height:36px}
+.sub{font-size:10px;color:#879188}.price{font-size:14px;color:#203b2b}
+.add{border-radius:2px;background:#fff;border:1px solid #a9bd9d;color:#28553a;font-size:10px;letter-spacing:.1em;padding:11px}
+.add:hover{background:#edf4e7}
+.why-clickit{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;margin:65px 0 40px;padding:42px 0;border-top:1px solid #e8ece6;border-bottom:1px solid #e8ece6}
+.why-intro h2{font:500 40px/1.04 Georgia,serif;letter-spacing:-1px;color:#203b2b;margin:13px 0}
+.why-intro p{max-width:360px;font-size:12px;line-height:1.9;color:#748077}
+.why-points{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:center}
+.why-points article{border-left:1px solid #e3e9e0;padding-left:17px}
+.why-points article span{display:block;color:#91a17f;font-size:10px;margin-bottom:25px}
+.why-points article b{font:500 17px Georgia,serif;color:#294332}
+.why-points article p{font-size:10px;line-height:1.8;color:#7a857c}
+.banner{background:#eef3e8;border:0;border-radius:2px;padding:27px 34px;margin:40px 0}
+.banner h2{font:500 25px Georgia,serif}.banner p{font-size:11px}
+footer{background:#193c2b;padding:48px 42px}
+.foot{max-width:1356px}.foot p{font-size:11px;color:#d0dbd0}.foot b{font-size:11px;letter-spacing:.04em}
+.floatcart{background:#174c35;border-radius:2px;padding:14px 20px;box-shadow:0 8px 24px #173e2e26;font-size:11px}
+@media(max-width:1100px){.nav{padding:12px 20px;gap:12px}.main-links{gap:10px}.main-links a{font-size:10px}.wrap{padding:22px 20px}.products{grid-template-columns:repeat(4,minmax(0,1fr))}.cats{grid-template-columns:repeat(6,minmax(0,1fr))}.why-clickit{gap:35px}}
+@media(max-width:760px){.nav{flex-wrap:wrap}.main-links{order:4;width:100%;justify-content:center;padding:7px 0 2px;border-top:1px solid #edf0eb}.search{order:3;flex-basis:100%}.delivery{margin-left:auto}.login-link{display:none}.hero{grid-template-columns:1fr;padding:28px 24px;gap:22px;min-height:0}.hero h1{font-size:52px}.heroimg{height:210px}.shop-moments{grid-template-columns:1fr 1fr}.moment-card:first-child{grid-column:span 2}.why-clickit{grid-template-columns:1fr;gap:20px}.why-points{gap:12px}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.cats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:520px){.top{font-size:8px}.nav{padding:10px 12px}.logo{font-size:26px}.delivery{min-width:120px;padding-left:10px}.delivery strong{font-size:10px}.wrap{padding:16px 12px}.hero{padding:23px 18px}.hero h1{font-size:43px;letter-spacing:-1.8px}.heroimg{height:165px}.promises{justify-content:flex-start;overflow:auto;white-space:nowrap;margin-bottom:25px}.promises span{padding:3px 12px;font-size:9px}.shop-moments{gap:8px;margin:25px 0 35px}.moment-card{height:155px;padding:14px}.moment-card b{font-size:20px}.head{margin:31px 0 14px}.head h2{font-size:26px}.cats{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.cat{padding:8px 5px}.cat img{height:55px}.cat b{font-size:9px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:8px}.product img{height:125px}.why-clickit{margin:42px 0 28px;padding:27px 0}.why-intro h2{font-size:33px}.why-points{grid-template-columns:1fr;gap:15px}.why-points article{padding:0 0 0 13px}.why-points article span{margin-bottom:7px}.banner{padding:19px;margin:25px 0}.banner h2{font-size:20px}footer{padding:34px 17px}.floatcart{right:12px;bottom:12px}}
 </style></head><body>
 <div class="top">FREE DELIVERY ON YOUR FIRST DEMO BASKET · <b>CLICKIT</b> — your neighbourhood essentials, all in one place</div>
-<header><div class="nav"><div class="logo">CLICK<span>IT</span>.</div><button class="delivery location-trigger" id="locationBtn"><span>DELIVERY IN <b>8 MINUTES*</b></span><strong id="location">Select location⌄</strong></button><div class="search">⌕ <input id="search" placeholder="Search paneer, chocolate, fresh fruits..." aria-label="Search products"><span class="search-hint">↵</span></div><button class="btn alt" id="loginBtn">Log in</button><button class="btn alt" id="ordersBtn">My orders</button><button class="btn" id="cartBtn">🛒 Cart <span id="cartCount">0</span></button></div></header>
+<header><div class="nav"><a class="logo" href="#" aria-label="CLICKIT home">CLICK<span>IT</span><i>.</i></a><button class="delivery location-trigger" id="locationBtn"><span>DELIVERING TO</span><strong id="location">Select location⌄</strong></button><div class="search">⌕ <input id="search" placeholder="Search groceries, fresh produce and more..." aria-label="Search products"><span class="search-hint">↵</span></div><nav class="main-links" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#categories">Departments</a><a href="#why-clickit">Our promise</a></nav><button class="btn alt" id="ordersBtn">My orders</button><button class="btn" id="cartBtn">🛒 Basket <span id="cartCount">0</span></button><button class="btn alt login-link" id="loginBtn">Log in</button></div></header>
 <main class="wrap"><section class="hero carousel" id="heroCarousel"><div class="hero-copy"><div class="eyebrow" id="heroEyebrow">THE GOOD STUFF, RIGHT AROUND THE CORNER</div><h1 id="heroTitle">A little fresher.<br>A lot easier.</h1><p id="heroText">Thoughtfully picked essentials for every day — from market-fresh produce to little treats worth sharing.</p><a class="cta" href="#shop">Explore the collection ↗</a><div class="hero-controls"><button id="heroPrev">←</button><span id="heroDots"><i class="on"></i><i></i><i></i></span><button id="heroNext">→</button></div></div><div class="hero-visual"><img class="heroimg" id="heroImage" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=85" alt="Fresh grocery selection"><div class="image-note"><b>GOOD CHOICES</b><span>delivered to your door</span></div></div></section>
-<div class="promises"><span>✦ Carefully selected</span><span>◷ Quick neighbourhood delivery*</span><span>♧ Everyday value</span><span>♡ Made for your routine</span></div>
+<div class="promises"><span>✦ Carefully selected</span><span>◷ Quick neighbourhood delivery*</span><span>♧ Everyday value</span><span>♡ Made for your routine</span></div><section class="shop-moments" aria-label="Shop collections"><a class="moment-card moment-fresh" href="#categories"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=85" alt="Fresh produce"><span>THE FRESH EDIT</span><b>Goodness from<br>the market.</b><em>Explore fresh picks ↗</em></a><a class="moment-card moment-pantry" href="#shop"><img src="https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=700&q=85" alt="Pantry essentials"><span>EVERYDAY ESSENTIALS</span><b>Stock up on<br>the good stuff.</b><em>Shop pantry ↗</em></a><a class="moment-card moment-treats" href="#shop"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=85" alt="Food and snacks"><span>A LITTLE SOMETHING</span><b>Make today<br>more delicious.</b><em>Find a treat ↗</em></a></section>
 <div class="head"><div><div class="eyebrow">FIND YOUR FAVOURITES</div><h2>Explore departments</h2></div><small>Swipe to discover →</small></div><div class="cats" id="categories"></div>
 <div class="head" id="shop"><h2 id="productHeading">Popular essentials</h2><small id="productCount"></small></div><div class="products" id="products"></div>
-<div class="banner"><div><h2>Your daily list, made simpler.</h2><p>Explore everyday essentials and put together your next basket.</p></div><b>CLICKIT →</b></div>
+<section class="why-clickit" id="why-clickit"><div class="why-intro"><div class="eyebrow">THE CLICKIT WAY</div><h2>Thoughtful shopping.<br>Made for real life.</h2><p>A simple place for the things you reach for every day. Browse at your pace, build your basket, and keep your routine moving.</p></div><div class="why-points"><article><span>01</span><b>Everyday favourites</b><p>Fresh picks, pantry staples and little extras in one collection.</p></article><article><span>02</span><b>A simpler basket</b><p>Find what you need, add it in a tap and review everything together.</p></article><article><span>03</span><b>Clear, honest demo</b><p>Explore the shopping experience with transparent demo checkout.</p></article></div></section><div class="banner"><div><h2>Your daily list, made simpler.</h2><p>Explore everyday essentials and put together your next basket.</p></div><b>CLICKIT →</b></div>
 <section id="orderHistory"><div class="head"><h2>Your recent orders</h2><small>Saved on this device</small></div><div class="orders" id="ordersList">Your orders will appear here after checkout.</div></section></main>
 <footer><div class="foot"><div><div class="logo" style="color:white">CLICK<span>IT</span>.</div><p>A simple demo storefront for everyday grocery shopping.</p><small>© 2026 CLICKIT · Demo storefront</small></div><div><b>Customer care</b><p>Help · Delivery information · Returns</p><small>Demo only · No live payments or delivery dispatch.</small></div><div><b>Quick links</b><p><a href="/admin/">Admin panel</a> · Privacy · Terms</p><small>Delivery times depend on service availability.</small></div></div></footer>
 <button class="floatcart" id="floatCart">🛒 View basket · <span id="floatCount">0</span></button>
